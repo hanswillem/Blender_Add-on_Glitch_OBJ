@@ -1,4 +1,4 @@
-# Blender Add on Glitch OBJ
+# Blender Add-on Glitch OBJ
 
 ![img](https://github.com/hanswillem/Blender_Add-on_Glitch_OBJ/blob/master/example_img.png)
 
