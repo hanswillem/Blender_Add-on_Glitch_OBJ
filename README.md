@@ -1,5 +1,5 @@
 # Glitch an OBJ file with one click in Blender
-Download the add-on from this repo or by clicking [here](https://www.dropbox.com/s/zp6sd58ga81afce/add-on_glitch_obj.zip?dl=0&m=dl=1) the add-on. Install it, open a blend file with at least one mesh object, and click on 'Glitch OBJ'. That's it.
+Download the add-on from this repo or by clicking [here](https://www.dropbox.com/s/zp6sd58ga81afce/add-on_glitch_obj.zip?dl=1&m=) the add-on. Install it, open a blend file with at least one mesh object, and click on 'Glitch OBJ'. That's it.
 
 ![img](https://github.com/hanswillem/Blender_Add-on_Glitch_OBJ/blob/master/example_img.png)
 
