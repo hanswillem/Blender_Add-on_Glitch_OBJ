@@ -3,6 +3,6 @@ Download and install the add-on. Open a blend file with at least one mesh object
 
 ![img](https://github.com/hanswillem/Blender_Add-on_Glitch_OBJ/blob/master/example_img.png)
 
-The add-on works by saving the scene as an .obj file and then messing with the data. It shuffles lines around, replaces random numbers with random other numbers and some other stuff. Then it imports the .obj file again. I used [this](http://www.srcxor.org/blog/3d-glitching/) as a guide.
+The add-on works by saving the scene as an .obj file and then corrupting the data. It shuffles lines around, replaces random numbers with random other numbers and some other stuff. Finally it imports the .obj file again. I used [this](http://www.srcxor.org/blog/3d-glitching/) as a guide.
 
 ![img](https://github.com/hanswillem/Blender_Add-on_Glitch_OBJ/blob/master/messing_with_obj.png)
