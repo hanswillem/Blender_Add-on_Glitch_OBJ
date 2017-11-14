@@ -16,8 +16,6 @@
 #
 # ##### END GPL LICENSE BLOCK #####
 
-# This add-on is made for OSX!
-
 
 bl_info = {
     'name' : 'Glitch',
