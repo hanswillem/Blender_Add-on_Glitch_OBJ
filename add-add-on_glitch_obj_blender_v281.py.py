@@ -104,6 +104,7 @@ def main_removeFaces(n):
     else:
         pass
 
+#not used right now
 def flatShadingAllObjects():
     for i in bpy.data.objects:
         if i.type == 'MESH':
