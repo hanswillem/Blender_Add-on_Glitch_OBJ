@@ -19,6 +19,7 @@ import random
 class glitchPropertyGroup(bpy.types.PropertyGroup):
     bpy.types.Scene.prop_shuffleVertices = bpy.props.FloatProperty(min=0, max=1, name='Shuffle Verts', default=.1)
     bpy.types.Scene.prop_randomNumbers = bpy.props.FloatProperty(min=0, max=1, name='Random Numbers', default=.1)
+    bpy.types.Scene.prop_randomRange = bpy.props.IntProperty(min=2, name='Random Range', default=2)
     bpy.types.Scene.prop_removeFaces = bpy.props.FloatProperty(min=0, max=1, name='Remove Faces', default=.1)
 
 #the obj file is saved to and loaded from the temp folder
@@ -39,7 +40,7 @@ def main_importOBJ():
     bpy.ops.import_scene.obj(filepath = glitchedFile)
 
 #change numbers in obj file
-def main_randomNumbers(n):
+def main_randomNumbers(n, rng):
     if n != 0:
         main_exportOBJ()
         f = open(exportedFile)
@@ -47,8 +48,8 @@ def main_randomNumbers(n):
         for l in f:
             if l[0] == 'v':
                 if random.random() < n:
-                    rn1 = random.choice(range(10))
-                    rn2 = random.choice(range(10))
+                    rn1 = random.choice(range(rng))
+                    rn2 = random.choice(range(rng))
                     l = [str(rn1) if i == str(rn2) else i for i in l]
 
             fn.write(''.join(l))
@@ -111,10 +112,10 @@ def flatShadingAllObjects():
             for p in i.data.polygons:
                 p.use_smooth = False
 
-def main_glitch(n1, n2, n3):
+def main_glitch(n1, n2, n3, n4):
     main_shuffleVertices(n1)
-    main_randomNumbers(n2)
-    main_removeFaces(n3)
+    main_randomNumbers(n2, n3)
+    main_removeFaces(n4)
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -134,6 +135,7 @@ class GLITCHPANEL_PT_Panel(bpy.types.Panel):
         col = layout.column(align = True)
         col.prop(context.scene, 'prop_shuffleVertices', slider=True)
         col.prop(context.scene, 'prop_randomNumbers', slider=True)
+        col.prop(context.scene, 'prop_randomRange', slider=False)
         col.prop(context.scene, 'prop_removeFaces', slider=True)
         col.operator('script.glitch', text='Glitch!')
          
@@ -153,8 +155,9 @@ class GLITCH_OT_Operator(bpy.types.Operator):
     def execute(self, context):
         n1 = bpy.context.scene.prop_shuffleVertices
         n2 = bpy.context.scene.prop_randomNumbers
-        n3 = bpy.context.scene.prop_removeFaces
-        main_glitch(n1, n2, n3)
+        n3 = bpy.context.scene.prop_randomRange
+        n4 = bpy.context.scene.prop_removeFaces
+        main_glitch(n1, n2, n3, n4)
         return {'FINISHED'}
         
 #registration
