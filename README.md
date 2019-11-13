@@ -3,7 +3,7 @@
 ![img](https://github.com/hanswillem/Blender_Add-on_Glitch_OBJ/blob/master/example_img.png)
 
 Download the add-on from this repo, install it, create a scene with at least one mesh object, and click on *Glitch OBJ*. 
-The Blender 2.8 versions has some sliders you can tweak to change the behaviour a bit.
+The Blender 2.8 version has some sliders you can tweak to change the behaviour a bit.
 
 That's it.
 
