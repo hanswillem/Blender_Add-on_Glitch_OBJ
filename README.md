@@ -1,4 +1,4 @@
-# Glitch an OBJ file with one click in Blender
+# Glitch an OBJ file in Blender
 
 ![img](https://github.com/hanswillem/Blender_Add-on_Glitch_OBJ/blob/master/example_img.png)
 
